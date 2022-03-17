@@ -11,7 +11,7 @@ public class Problem2 {
     public static void main(String[] args) {
         int secondValue = 2, nextValue = 3;
         int sumOfEvenValues = 2;
-        for (int i = 4; nextValue < 4_000_000; i++) {
+        while (nextValue < 4_000_000) {
             int temp = nextValue;
             nextValue = nextValue + secondValue;
             if (nextValue % 2 == 0)
