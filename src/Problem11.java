@@ -52,7 +52,7 @@ public class Problem11 {
                         {20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54},
                         {1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48}
                 };
-        //yatay
+        //horizontal
         long productOfNumbers = 0, largestValue = 0;
         for (int i = 0; i < 20; i++)
             for (int k = 0; k < 17; k++) {
@@ -60,7 +60,7 @@ public class Problem11 {
                 if (productOfNumbers > largestValue)
                     largestValue = productOfNumbers;
             }
-        //dikey
+        //vertical
         for (int i = 0; i < 17; i++)
             for (int k = 0; k < 20; k++) {
                 productOfNumbers = array[i][k] * array[i + 1][k] * array[i + 2][k] * array[i + 3][k];
@@ -68,14 +68,14 @@ public class Problem11 {
                     largestValue = productOfNumbers;
             }
 
-        //soldan sağa çaprazlama
+        //left to right crosswise
         for (int i = 0; i < 17; i++)
             for (int k = 0; k < 17; k++) {
                 productOfNumbers = array[i][k] * array[i + 1][k + 1] * array[i + 2][k + 2] * array[i + 3][k + 3];
                 if (productOfNumbers > largestValue)
                     largestValue = productOfNumbers;
             }
-        //sağdan sola çaprazlama
+        //right to left crosswise
         for (int i = 0; i < 17; i++)
             for (int k = 3; k < 20; k++) {
                 productOfNumbers = array[i][k] * array[i + 1][k - 1] * array[i + 2][k - 2] * array[i + 3][k - 3];

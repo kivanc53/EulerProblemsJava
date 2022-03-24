@@ -32,23 +32,23 @@ public class Problem15 {
     public static int[] createLowerBound(int n) {
         int[] subArray = new int[n];
 
-        int count1 = 1;
+        int count = 1;
         for (int i = 0; i < n; i++) {
-            subArray[i] = count1;
-            count1++;
+            subArray[i] = count;
+            count++;
         }// 1 den n dahil atadık.
         return subArray;
     }
 
 
     public static long findResult(int[] topArray, int[] subArray) {
-        long pay, payda;
-        pay = multiply(topArray);
-        payda = multiply(subArray);
+        long numerator, denominator;
+        numerator = multiply(topArray);
+        denominator = multiply(subArray);
 
-        if (payda == 0)
-            return pay;
-        return pay / payda;
+        if (denominator == 0)
+            return numerator;
+        return numerator / denominator;
 
     }
 
@@ -69,7 +69,7 @@ public class Problem15 {
         int[] subArray = createLowerBound(n);
 
         for (int i = 0; i < topArray.length; i++) {
-            if (Metotlar.isPrime(topArray[i]))
+            if (Methods.isPrime(topArray[i]))
                 continue;
             else for (int k = 0; k < subArray.length; k++) {
                 if (subArray[k] == 0)
@@ -82,7 +82,7 @@ public class Problem15 {
             }
         }
 
-        System.out.println(findResult(topArray,subArray));
+        System.out.println(findResult(topArray, subArray));
 
     }
 }

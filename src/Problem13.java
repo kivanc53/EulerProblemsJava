@@ -206,7 +206,7 @@ public class Problem13 {
                         "20849603980134001723930671666823555245252804609722" +
                         "53503534226472524250874054075591789781264330331690";
 
-        //ilk [] = satır, ikinci [] = sütun
+        //first [] = row, second [] = column
         int[][] array = new int[100][50];
         int a = 0, b = 50;
         for (int i = 0; i < 100; i++) {

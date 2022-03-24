@@ -15,29 +15,27 @@ Let us list the factors of the first seven triangle numbers:
 We can see that 28 is the first triangle number to have over five divisors.
 What is the value of the first triangle number to have over five hundred divisors?
  */
-public class Problem12{
-    public static void main(String[] args)
-    {
-       int sum = 0;
-       for (int i = 1; i <= 80_000_000; i++) {
-           sum += i;
-           if (Factors(sum) > 500){
-               System.out.println(sum);
-               break;
-           }
-       }
-
-
-    }
-    public static int Factors(int n){
-        int counter = 0;
-        int k = (int) Math.sqrt(n);
-        for(int i = 1; i < k + 1; i ++){
-            if(n % i == 0){
-                counter ++;
+public class Problem12 {
+    public static void main(String[] args) {
+        int sum = 0;
+        for (int i = 1; i <= 80_000_000; i++) {
+            sum += i;
+            if (factors(sum) > 500) {
+                System.out.println(sum);
+                break;
             }
         }
-        return counter * 2  ;
+    }
+
+    public static int factors(int n) {
+        int counter = 0;
+        int k = (int) Math.sqrt(n);
+        for (int i = 1; i < k + 1; i++) {
+            if (n % i == 0) {
+                counter++;
+            }
+        }
+        return counter * 2;
 
     }
 }

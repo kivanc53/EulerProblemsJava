@@ -10,7 +10,7 @@ public class Problem7 {
         int countOfPrimes = 6;
 
         for (int i = 14; i <= 105_000; i++) {
-            if (Metotlar.isPrime(i))
+            if (Methods.isPrime(i))
                 countOfPrimes++;
             if (countOfPrimes == 10_001) {
                 System.out.println("10 001st prime number is: " + i);

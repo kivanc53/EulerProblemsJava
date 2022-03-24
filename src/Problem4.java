@@ -10,7 +10,7 @@ public class Problem4 {
         int largest = 0;
         for (int i = 999; i >= 900; i--)
             for (int k = 999; k >= 900; k--)
-                if (Metotlar.isPolindrome(i * k) && (i * k) > largest) {
+                if (Methods.isPolindrome(i * k) && (i * k) > largest) {
                     System.out.println(i + " " + k);
                     largest = i * k;
                 }
