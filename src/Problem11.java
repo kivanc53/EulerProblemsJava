@@ -53,7 +53,7 @@ public class Problem11 {
                         {1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48}
                 };
         //horizontal
-        long productOfNumbers = 0, largestValue = 0;
+        long productOfNumbers, largestValue = 0;
         for (int i = 0; i < 20; i++)
             for (int k = 0; k < 17; k++) {
                 productOfNumbers = array[i][k] * array[i][k + 1] * array[i][k + 2] * array[i][k + 3];

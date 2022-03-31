@@ -62,28 +62,21 @@ public class Problem15 {
         return result;
     }
 
-
     public static void findRoutes(int n) {
-
         int[] topArray = createUpperBound(n);
         int[] subArray = createLowerBound(n);
 
         for (int i = 0; i < topArray.length; i++) {
-            if (Methods.isPrime(topArray[i]))
-                continue;
-            else for (int k = 0; k < subArray.length; k++) {
-                if (subArray[k] == 0)
-                    continue;
-                else if (topArray[i] % subArray[k] == 0) {
-
-                    topArray[i] = topArray[i] / subArray[k];
-                    subArray[k] = 0;
+            if (!Methods.isPrime(topArray[i])) {
+                for (int k = 0; k < subArray.length; k++) {
+                    if (subArray[k] != 0 && topArray[i] % subArray[k] == 0) {
+                        topArray[i] = topArray[i] / subArray[k];
+                        subArray[k] = 0;
+                    }
                 }
             }
         }
-
         System.out.println(findResult(topArray, subArray));
-
     }
 }
 
