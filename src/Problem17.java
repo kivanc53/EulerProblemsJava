@@ -34,8 +34,7 @@ public class Problem17 {
                     str += "fourteen";
                 else if ((val % 100) < 20)
                     str = str + twelveTo20(((val % 100) % 10)) + "teen"; //okay
-                else if (val % 100 < 100)
-                    str = str + twelveTo20(((val % 100) / 10)) + "ty" + oneTo12(val % 10); //okay
+                else str = str + twelveTo20(((val % 100) / 10)) + "ty" + oneTo12(val % 10); //okay
             }
         } else
             str += "onethousand";
